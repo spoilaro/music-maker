@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #282828;
+  font-family: "Montserrat", sans-serif;
+}
+
+nav {
+  background-color: #1d2021;
+  color: #98971a;
+  padding: 5px 20px;
+  font-style: italic;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#controls {
+  border: 1px solid white;
+}
+
+#tracks {
+}
+
+.track-container {
+  border: 2px solid #32302f;
+  min-width: 30vw;
+  padding: 10px;
+}
+
+.track-container .active {
+}

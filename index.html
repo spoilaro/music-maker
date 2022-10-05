@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Maker</title>
+    <script src="dist/index.js" defer></script>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <h1>Music Maker</h1>
+    </nav>
+
+    <section id="main">
+      <div id="controls">
+        <button id="play">Play</button>
+        <input
+          type="file"
+          id="input-sample"
+          name="input-sample"
+          accept="audio/*"
+        />
+        <button id="upload">Add new sample</button>
+      </div>
+
+      <div id="tracks">
+        <div class="track-container">
+          <input type="radio" id="track1" name="track" value="0" checked />
+          <label for="track1">Track 1</label><br />
+        </div>
+      </div>
+
+      <div id="addButtons"></div>
+
+      <div id="tracks"></div>
+    </section>
+  </body>
+</html>
