@@ -20,8 +20,20 @@
     </nav>
 
     <section id="main">
+      <div id="sample-library">
+        <h2>Sample Library</h2>
+        <ul id="sample-list"></ul>
+      </div>
+
+      <div id="tracks">
+        <div class="track-container">
+          <label for="track1">Track 1</label><br />
+          <div class="sample-container"></div>
+        </div>
+      </div>
       <div id="controls">
         <button id="play">Play</button>
+        <button id="add-track">Add Track</button>
         <input
           type="file"
           id="input-sample"
@@ -29,13 +41,6 @@
           accept="audio/*"
         />
         <button id="upload">Add new sample</button>
-      </div>
-
-      <div id="tracks">
-        <div class="track-container">
-          <input type="radio" id="track1" name="track" value="0" checked />
-          <label for="track1">Track 1</label><br />
-        </div>
       </div>
 
       <div id="addButtons"></div>

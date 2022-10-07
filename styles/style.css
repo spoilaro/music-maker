@@ -1,3 +1,9 @@
+:root {
+  --bg-color-first: #282828;
+  --bg-color-second: #1d2021;
+  --bg-color-third: #504945;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,12 +11,12 @@
 }
 
 body {
-  background-color: #282828;
+  background-color: var(--bg-color-first);
   font-family: "Montserrat", sans-serif;
 }
 
 nav {
-  background-color: #1d2021;
+  background-color: var(--bg-color-second);
   color: #98971a;
   padding: 5px 20px;
   font-style: italic;
@@ -21,13 +27,14 @@ section {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  position: relative;
+
+  padding: 1rem;
 }
 
 #controls {
   border: 1px solid white;
-}
-
-#tracks {
 }
 
 .track-container {
@@ -36,5 +43,35 @@ section {
   padding: 10px;
 }
 
-.track-container .active {
+#tracks {
+  background-color: red;
+  min-width: 70vw;
+
+  display: grid;
+
+  grid-auto-flow: row;
+  grid-row-gap: 0.5rem;
+}
+#sample-library {
+  background-color: var(--bg-color-third);
+  padding: 0.5rem;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  max-width: 20vw;
+  height: 100vh;
+}
+
+#sample-list {
+  padding: 20px;
+  list-style: none;
+}
+
+#sample-list div {
+  cursor: move;
+  border: solid 1px red;
+  margin: 10px 0;
+  padding: 5px 10px;
 }
