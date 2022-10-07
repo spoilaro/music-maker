@@ -1,6 +1,6 @@
 import { Sample, Track } from "./types";
 import { playTrack, addTrack } from "./controls";
-import { fill_sample_library } from "./utilites";
+import { fill_sample_library, drag, drop, allowDrop } from "./utilites";
 import { SampleTemplate } from "./components";
 
 // Initialize sampler
@@ -13,7 +13,7 @@ initializeSampler();
 const playButton = document.getElementById("play");
 const addTrackButton = document.getElementById("add-track");
 
-playButton?.addEventListener("click", () => null); //FIXME: Add handler for this
+playButton?.addEventListener("click", () => null); // FIXME: Add handler for this
 addTrackButton?.addEventListener("click", () => addTrack());
 
 const sampleContainer = document.getElementsByClassName("sample-container");

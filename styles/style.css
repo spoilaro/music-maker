@@ -18,8 +18,11 @@ body {
 nav {
   background-color: var(--bg-color-second);
   color: #98971a;
-  padding: 5px 20px;
   font-style: italic;
+  min-height: 8vh;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
 }
 
 section {
@@ -41,10 +44,11 @@ section {
   border: 2px solid #32302f;
   min-width: 30vw;
   padding: 10px;
+  min-height: 20vh;
 }
 
 #tracks {
-  background-color: red;
+  /* background-color: red; */
   min-width: 70vw;
 
   display: grid;
@@ -74,4 +78,10 @@ section {
   border: solid 1px red;
   margin: 10px 0;
   padding: 5px 10px;
+}
+
+.sample {
+  border-radius: 0.3em;
+  min-height: 5vh;
+  padding: 0.2rem;
 }

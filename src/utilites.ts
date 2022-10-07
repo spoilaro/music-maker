@@ -15,17 +15,36 @@ export const fill_sample_library = () => {
   const sampleListElement = document.getElementById("sample-list");
 
   sample_list.forEach((sample) => {
-    let sampleElem = document.createElement("li");
+    let sampleElem = document.createElement("div");
 
     sampleElem.draggable = true;
     sampleElem.innerHTML = `
-    <li>
-      <div draggable="true" >
         <h2>${sample.name}</h2>
-      </div>
-    </li>
     `;
 
+    sampleElem.addEventListener("dragstart", (event) => {
+      drag(event);
+    });
     sampleListElement?.appendChild(sampleElem);
   });
+};
+
+export const drag = (event: any) => {
+  event.dataTransfer?.setData("text", event?.target?.id);
+  console.log("Dragging");
+};
+
+export const drop = (event: any) => {
+  console.log("Dropping");
+  event.preventDefault();
+
+  var data = event.dataTransfer.getData("text");
+  console.log(data);
+  // event.target.appendChild(document.getElementById(data));
+};
+
+export const allowDrop = (event: any) => {
+  console.log("Hover");
+
+  event.preventDefault();
 };
